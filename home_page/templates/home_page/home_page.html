@@ -1,0 +1,30 @@
+{% extends "home_page/base.html" %}
+{% load static %}
+{% load account %}
+{% load socialaccount %}
+
+
+{% block content %}
+{% comment %} <h1>Аккаунт: {% user_display user %}</h1> {% endcomment %}
+
+
+<div id="loader-out">
+    <div id="loader-container">
+      <h5 id="loading-text">Cargando</h5>
+      <p id="notification-text">
+        <i class="fa-regular fa-bell"></i> Полить гортензию в 10:00</p>
+    </div>
+</div>
+<article class="widget">
+    <div class="weatherIcon"><i class="fa-solid fa-cloud"></i></div>
+    <div class="weatherInfo">
+      <div class="temperature"><span>25&deg;</span></div>
+      <div class="description">
+        <div class="weatherCondition">CLOUDY</div>
+        <div class="place">New York, New York</div>
+      </div>
+    </div>
+    <div class="date">1st Jan</div>
+</article>
+
+{% endblock content %}
